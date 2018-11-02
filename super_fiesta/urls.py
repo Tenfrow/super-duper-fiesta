@@ -21,5 +21,6 @@ from storage import views
 urlpatterns = [
     path('sellers/', views.SellerList.as_view()),
     path('products/', views.ProductList.as_view()),
+    path('products/<int:pk>', views.ProductDetail.as_view()),
     path('admin/', admin.site.urls),
 ]
