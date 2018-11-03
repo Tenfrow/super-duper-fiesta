@@ -6,7 +6,8 @@ from .models import Product, Seller
 class SellerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Seller
-        fields = ['id', 'name', 'birthday']
+        fields = ['id', 'name', 'birthday', 'products']
+        depth = 1
 
 
 class ProductSerializer(serializers.ModelSerializer):
